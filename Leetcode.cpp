@@ -214,11 +214,8 @@ class Solution99 {
         }
         if (arr[left] >=arr[end])
         swap(&arr[left], &arr[end]);
-        else
-        left++;
-        if (left) {
-            quick_sort_recursive(arr, start, left-1);
-        }
+
+        quick_sort_recursive(arr, start, left-1);
         quick_sort_recursive(arr, left + 1, end);
     }
     void quick_sort(int arr[], int len) {
